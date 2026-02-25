@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اعلام تعطیلی مدارس اصفهان | esf-tatili</title>
+    
+    <!-- فونت فارسی زیبای وزیرماتن از گوگل فونتس -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- تنظیمات کلی و تم سایت --- */
+        :root {
+            --bg-color: #1a1a1a; /* رنگ پس‌زمینه اصلی */
+            --card-bg-color: #2d2d2d; /* رنگ پس‌زمینه کارت‌ها */
+            --text-color: #e0e0e0; /* رنگ متن اصلی */
+            --primary-color: #bb86fc; /* رنگ بنفش برای تاکید */
+            --header-color: #ffffff; /* رنگ متن هدر */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background-color: var(--card-bg-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        /* --- هدر سایت --- */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--header-color);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .update-time {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* --- بخش اصلی محتوا --- */
+        .main-content {
+            padding: 30px;
+        }
+
+        .section {
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #444;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .section p {
+            font-size: 1.1rem;
+        }
+
+        /* --- استایل‌های وضعیت مدارس --- */
+        #school-status p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .status-holiday {
+            color: #4CAF50; /* سبز */
+            background-color: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4CAF50;
+        }
+
+        .status-open {
+            color: #F44336; /* قرمز */
+            background-color: rgba(244, 67, 54, 0.1);
+            border: 2px solid #F44336;
+        }
+
+        .status-unknown {
+            color: #FFC107; /* زرد */
+            background-color: rgba(255, 193, 7, 0.1);
+            border: 2px solid #FFC107;
+        }
+
+        .status-probable {
+            color: #FF9800; /* نارنجی */
+            background-color: rgba(255, 152, 0, 0.1);
+            border: 2px solid #FF9800;
+        }
+
+        /* --- فوتر سایت --- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- هدر سایت -->
+        <header class="header">
+            <h1>خوش آمدید</h1>
+            <p class="update-time">ساعات آپدیت: 15 تا 23</p>
+        </header>
+
+        <!-- محتوای اصلی -->
+        <main class="main-content">
+            
+            <!-- بخش ۱: وضعیت مدارس -->
+            <section class="section">
+                <h2>وضعیت مدارس اصفهان</h2>
+                <div id="school-status">
+                    <!-- برای تغییر وضعیت، فقط تگ <p> مورد نظر خود را از حالت کامنت خارج کرده و بقیه را کامنت کنید -->
+                    
+                    <!-- گزینه ۱: مدارس تعطیل است -->
+                    <p class="status-holiday">مدارس تعطیل است</p>
+                    
+                    <!-- گزینه ۲: مدارس تعطیل نیست -->
+                    <!-- <p class="status-open">تعطیل نیست</p> -->
+                    
+                    <!-- گزینه ۳: هنوز معلوم نیست -->
+                    <!-- <p class="status-unknown">هنوز معلوم نیست</p> -->
+                    
+                    <!-- گزینه ۴: احتمالا تعطیل -->
+                    <!-- <p class="status-probable">احتمالا تعطیل (تا ساعاتی دیگر اعلام میشود)</p> -->
+                </div>
+            </section>
+
+            <!-- بخش ۲: آلودگی هوا -->
+            <section class="section">
+                <h2>آلودگی هوای اصفهان</h2>
+                <div id="air-pollution-level">
+                    <!-- وضعیت آلودگی هوا را هر ساعت در اینجا ویرایش کنید -->
+                    <p>وضعیت فعلی: <strong>قابل قبول</strong></p>
+                    <p>شاخص فعلی AQI:52</p>
+                </div>
+            </section>
+
+            <!-- بخش ۳: نظر و اخبار -->
+            <section class="section">
+                <h2>نظر و اخبار</h2>
+                <div id="comments-news">
+                    <!-- نظر و اخبار خود را روزانه در اینجا وارد کنید -->
+                    <p>فردا پنجشنبه است</p>
+                    <p>اخبار مربوط به کلاس‌های جبرانی و امتحانات متعاقباً اعلام خواهد شد.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- فوتر سایت -->
+        <footer class="footer">
+            <p>&copy; 2024 esf-tatili | تمام حقوق محفوظ است.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
